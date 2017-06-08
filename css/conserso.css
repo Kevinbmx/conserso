@@ -1,3 +1,7 @@
+body{
+    background: white;
+}
+
 .owl-wrapper{
 	/*width: :15%;*/
 	height: 100%
@@ -124,7 +128,7 @@ filter: brightness(85%);
 
 @media only screen and (max-width: 768px){
       #contact-area .form-group textarea {
-  height: 100px;
+  height: 90px;
 }
 #contactenos-cont{
 display: none;
@@ -140,6 +144,21 @@ height: 80%;
   .centrar-QuienSomos{
     height: 70%;
   }
+      .page-footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .footer-text {
+        font-size: 14px;
+    }
+
+
+
+    .quitar a {
+        font-size: 14px;
+    }
+
 }
 
 @media only screen and (max-width: 425px) {
@@ -158,4 +177,123 @@ height: 80%;
 
 .active a{
     background-color: #D40A18 !important;
+}
+
+.section-header p{
+    color: black;
+    font-weight: 300px;
+    font-size: 17px;
+}
+
+
+.paginas{
+    margin: 0 auto;
+}
+
+.page-footer label{
+    margin: 0px;
+}
+
+.paginas a {
+    float: right;
+    width: 19px;
+    height: 19px;
+    margin-right: 5px;
+    margin-left: : 5px;
+    text-decoration: none;
+    /*color: #AFAEAE;*/
+    background-color: rgba(255, 255, 255, 0.0) !important;
+
+    color: #37617C;
+    background-image: url('../images/iconos.svg');
+}
+
+.paginas .facebook {
+    background-position: -26px -4px;
+}
+
+.paginas .youtube {
+    background-position: -26px -33px;
+}
+
+.paginas .googleplus {
+    background-position: -27px -62px;
+}
+
+
+.page-footer {
+    /*background-color: #05939D;*/
+    /*background-color: rgba(248,248,248,0.8);*/
+    /*background-color: #BBAC97;*/
+    /*background-color: #C6B397;*/
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background-color: #474747;
+    border-radius: 2px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 2;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-text {
+    color: #FFFFFF;
+    /*color: #454545;*/
+    font-size: 11px;
+}
+
+.page-footer span {
+    color: #C3C3C3;
+    /*color: #454545;*/
+}
+
+.quitar a {
+    text-decoration: none;
+    color: #FFFFFF;
+    /*color: #454545;*/
+    font-size: 11px;
+}
+
+
+
+
+
+@media only screen and (min-width: 1024px) {
+
+
+.center-content {
+        margin: 0 auto;
+        width: 980PX;
+    }   
+ /*footer*/
+    .footer-content {
+        display: flex;
+    }
+
+        .footer-content div {
+            width: 33.33%;
+            margin: auto;
+        }
+    }
+
+    .desarrollado a{
+        background-color: rgba(255, 255, 255, 0.0) !important;
+    }
+
+
+.quitar{
+    display: flex;
+}
+
+
+.message{
+    height: 100px;
+}
+
+#section1{
+    background: url(../Images/Fondo.svg);
 }
