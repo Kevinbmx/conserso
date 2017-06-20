@@ -27,6 +27,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png" />
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png" />
     <link rel="stylesheet" href="css/smoothbox.css" />
+    <link href="~/App_Themes/style.css" rel="stylesheet" />
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -80,6 +82,12 @@
             <div class="container">
                 <div class="row">
                     <div style="padding: 10px;">
+                        <div class="text-center">
+                            <asp:HyperLink ID="Facebook_link" NavigateUrl="#" runat="server" CssClass="btn btn-link" Target="_blank" Style="color: #3A5897;">
+                                <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i> JardinesDelNorteIV
+                            </asp:HyperLink>
+                        </div>
+
                         <ul class="nav nav-tabs  nav-justified wow fadeInUp">
                             <li class="active"><a data-toggle="tab" href="#part1">Descripcion proyecto</a></li>
                             <li><a data-toggle="tab" href="#part2">Departamentos</a></li>
@@ -374,14 +382,43 @@
                     </div>
                 </div>
             </div>
-            </div>
+
         </section>
 
         <footer class="page-footer" style="position: inherit;">
+            <div class="share-buttons">
+                <div>
+                    <%--                        <div style="text-align: right;">Compartir:</div>--%>
+                    <!-- Facebook -->
+                    <a href="http://www.facebook.com/sharer.php?u=www.komodo.bo" target="_blank" class="btn   facebookShareButton">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="https://twitter.com/share?url=www.komodo.bo&amp;text=www.komodo.bo" target="_blank" class="btn   twitterShareButton">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <!-- Google+ -->
+                    <a href="https://plus.google.com/share?url=www.komodo.bo" target="_blank" class="btn   googlePlusShareButton">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=www.komodo.bo" target="_blank" class="btn   linkedinShareButton">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <!-- Whatsapp -->
+                    <a href="whatsapp://send?text=www.komodo.bo" class="btn   whatsappShareButton">
+                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                    <!-- Email -->
+                    <a href="mailto:?Subject=example@mail.com;Body=www.komodo.bo" class="btn   mailShareButton">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
             <div class="center-content footer-content footer-text">
-                <div class=" ">
+                <div class="">
                     <label class="">
-                        All Content Conserso - All Rights Reserved. 
+                        All Content Conserso - All Rights Reserved.
                     </label>
                 </div>
                 <div class="quitar">
@@ -439,18 +476,29 @@
 
         <script type="text/javascript">
             $(document).ready(function () {
-                $('.ir-arriba').click(function () {
-                    $('body, html').animate({
-                        scrollTop: '0px'
-                    }, 300);
-                });
-                $(window).scroll(function () {
-                    if ($(this).scrollTop() > 0) {
-                        $('.ir-arriba').slideDown(300);
-                    } else {
-                        $('.ir-arriba').slideUp(300);
-                    }
-                });
+
+                //$('.ir-arriba').click(function () {
+                //    $('body, html').animate({
+                //        scrollTop: '0px'
+                //    }, 300);
+                //});
+                //$(window).scroll(function () {
+                //    if ($(this).scrollTop() > 0) {
+                //        $('.ir-arriba').slideDown(300);
+                //    } else {
+                //        $('.ir-arriba').slideUp(300);
+                //    }
+                //});
+
+                var thisURL = document.URL;
+                $('.facebookShareButton').attr('href', 'http://www.facebook.com/sharer.php?u=' + thisURL);
+                $('.twitterShareButton').attr('href', 'https://twitter.com/share?url=' + thisURL);
+                $('.googlePlusShareButton').attr('href', 'https://plus.google.com/share?url=' + thisURL);
+                $('.linkedinShareButton').attr('href', 'http://www.linkedin.com/shareArticle?mini=true&amp;url=' + thisURL);
+                $('.whatsappShareButton').attr('href', 'whatsapp://send?text=' + thisURL);
+                $('.mailShareButton').attr('href', 'mailto:?Subject=example@mail.com;Body=' + thisURL);
+                $('.share-buttons i').addClass('fa-lg');
+
             });
         </script>
     </form>

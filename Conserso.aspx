@@ -23,20 +23,16 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <link href="css/conserso.css" rel="stylesheet" />
     <link href="css/letras.css" rel="stylesheet" />
-
     <!--[if IE]>
                 <script type="text/javascript">
                      var console = { log: function() {} };
                 </script>
             <![endif]-->
-
+    <link href="~/App_Themes/style.css" rel="stylesheet" />
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-
-
     <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
     <!-- <script type="text/javascript" src="examples.js"></script> -->
     <script type="text/javascript">
@@ -205,6 +201,7 @@
                                         <h3 class="features-title font-alt">Construccion</h3>
                                         <div class="contenido-servicios">
                                             Construccion y remodelacion de habitaciones, casas, edificios, oficinas entre otros inmuebles.
+                                       
                                         </div>
                                     </div>
                                 </div>
@@ -216,6 +213,7 @@
                                         <h3 class="features-title font-alt">Mantenimiento</h3>
                                         <div class="contenido-servicios">
                                             Respaldo y garantia de nuestros servio de mantenimiento  de residencias, oficinas, edificios e industrias.
+                                       
                                         </div>
                                     </div>
                                 </div>
@@ -227,6 +225,7 @@
                                         <h3 class="features-title font-alt">Asesoría Inmobiliaria</h3>
                                         <div class="contenido-servicios">
                                             Consejos para compra, venta, renta de inmuebles levantamientos topograficos y estudio de suelos
+                                       
                                         </div>
                                     </div>
                                 </div>
@@ -238,6 +237,7 @@
                                         <h3 class="features-title font-alt">Arquitetura</h3>
                                         <div class="contenido-servicios">
                                             Ponemos a su disposicion diferentes alternativas de proyectos, dependiendo del objetivo que busque.
+                                       
                                         </div>
                                     </div>
                                 </div>
@@ -372,10 +372,40 @@
                     </section>
                 </div>
                 <footer class="page-footer">
+                    <div class="share-buttons">
+                        <div>
+                            <%--                        <div style="text-align: right;">Compartir:</div>--%>
+                            <!-- Facebook -->
+                            <a href="http://www.facebook.com/sharer.php?u=www.komodo.bo" target="_blank" class="btn   facebookShareButton">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <!-- Twitter -->
+                            <a href="https://twitter.com/share?url=www.komodo.bo&amp;text=www.komodo.bo" target="_blank" class="btn   twitterShareButton">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <!-- Google+ -->
+                            <a href="https://plus.google.com/share?url=www.komodo.bo" target="_blank" class="btn   googlePlusShareButton">
+                                <i class="fa fa-google-plus" aria-hidden="true"></i>
+                            </a>
+                            <!-- LinkedIn -->
+                            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=www.komodo.bo" target="_blank" class="btn   linkedinShareButton">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <!-- Whatsapp -->
+                            <a href="whatsapp://send?text=www.komodo.bo" class="btn   whatsappShareButton">
+                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            </a>
+                            <!-- Email -->
+                            <a href="mailto:?Subject=example@mail.com;Body=www.komodo.bo" class="btn   mailShareButton">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
                     <div class="center-content footer-content footer-text">
                         <div class=" ">
                             <label class="">
                                 All Content Conserso - All Rights Reserved. 
+                           
                             </label>
                         </div>
                         <div class="quitar">
@@ -433,6 +463,21 @@
         <script type="text/javascript" src="js/jquery.inview.min.js"></script>
         <script type="text/javascript" src="js/wow.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                var thisURL = document.URL;
+                $('.facebookShareButton').attr('href', 'http://www.facebook.com/sharer.php?u=' + thisURL);
+                $('.twitterShareButton').attr('href', 'https://twitter.com/share?url=' + thisURL);
+                $('.googlePlusShareButton').attr('href', 'https://plus.google.com/share?url=' + thisURL);
+                $('.linkedinShareButton').attr('href', 'http://www.linkedin.com/shareArticle?mini=true&amp;url=' + thisURL);
+                $('.whatsappShareButton').attr('href', 'whatsapp://send?text=' + thisURL);
+                $('.mailShareButton').attr('href', 'mailto:?Subject=example@mail.com;Body=' + thisURL);
+                $('.share-buttons i').addClass('fa-lg');
+
+            });
+        </script>
     </form>
 </body>
 </html>

@@ -1,0 +1,61 @@
+﻿body {
+}
+
+    body a {
+        border: none;
+    }
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+
+.share-buttons {
+}
+
+    .share-buttons div {
+        /*float: right;*/
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .share-buttons a {
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+        border: none;
+        font-size: 20px;
+        color: white !important;
+        background: none !important;
+        /*display: flex;
+        align-items: center;
+        justify-content: center;*/
+    }
+
+/*.facebookShareButton {
+    color: white !important;
+    background-color: #3A5897 !important;
+}
+
+.twitterShareButton {
+    color: white !important;
+    background-color: #1DA1F2 !important;
+}
+
+.googlePlusShareButton {
+    color: white !important;
+    background-color: #DC5044 !important;
+}
+
+.linkedinShareButton {
+    color: white !important;
+    background-color: #0274B3 !important;
+}
+
+.whatsappShareButton {
+    color: white !important;
+    background-color: #0F9D58 !important;
+}
+
+.mailShareButton {
+    color: white !important;
+    background-color: #515151 !important;
+}*/
